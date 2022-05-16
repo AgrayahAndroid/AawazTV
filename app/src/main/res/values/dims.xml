@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_image_card_width">180dp</dimen>
+    <dimen name="default_image_card_height">180dp</dimen>
+    <dimen name="lb_details_v2_card_height">270dp</dimen>
+    <dimen name="lb_details_v2_align_pos_for_actions">108dp</dimen>
+    <dimen name="lb_details_overview_z">0dp</dimen>
+</resources>

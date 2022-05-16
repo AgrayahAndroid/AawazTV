@@ -1,0 +1,35 @@
+<resources>
+<!--    <string name="app_name">Aawaz TV</string>-->
+
+    <string name="play_now_1">Play Now</string>
+    <string name="play_now_2">FREE</string>
+
+    <string name="episodes">Episodes</string>
+
+    <string name="transport_title">%s - %s</string>
+<!--    <string name="episode_title">%s. %s</string>-->
+
+    <string name="credits_text">Made with &#2764; at Aawaz.com</string>
+
+    <string name="dialog_exit_exo_title">Are you sure you want to stop playing?</string>
+    <string name="dialog_exit_exo_description">Press BACK key on remote to continue playing</string>
+    <string name="dialog_exit_exo_button_positive">Continue Playing</string>
+    <string name="dialog_exit_exo_button_negative">Back to Details Screen</string>
+    <string name="dialog_exit_exo_button_negative_for_search">Back to Home Screen</string>
+
+    <string name="dialog_exit_title">Are you sure you want to exit?</string>
+    <string name="dialog_exit_description">Press BACK key on remote to go back to previous screen</string>
+    <string name="dialog_exit_button_positive">Yes</string>
+    <string name="dialog_exit_button_negative">No</string>
+
+    <!-- The hint text that appears in the search box -->
+    <string name="search_hint">Search for podcasts</string>
+
+    <string name="search_results">Search results for \'%1$s\'</string>
+    <string name="no_search_results">No search results found for \'%1$s\'</string>
+
+
+    <string name="dialog_exit_search_continue">Press BACK key on remote to continue search</string>
+
+    <string name="lb_search_bar_hint">Search for podcasts</string>
+</resources>

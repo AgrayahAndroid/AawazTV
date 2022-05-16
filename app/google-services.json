@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "29533762294",
+    "firebase_url": "https://aawaz-tv-default-rtdb.firebaseio.com",
+    "project_id": "aawaz-tv",
+    "storage_bucket": "aawaz-tv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29533762294:android:988e205144ea36c678f2d7",
+        "android_client_info": {
+          "package_name": "com.aawaz.tv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29533762294-9cd7j0sai8sidu8n7i7u6lnl60oo7b86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWBWFAEqZRsNSgxNyb68HoOcqv82p9JJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29533762294-9cd7j0sai8sidu8n7i7u6lnl60oo7b86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29533762294:android:e87286e25591496a78f2d7",
+        "android_client_info": {
+          "package_name": "com.aawaz.tv.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29533762294-9cd7j0sai8sidu8n7i7u6lnl60oo7b86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWBWFAEqZRsNSgxNyb68HoOcqv82p9JJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29533762294-9cd7j0sai8sidu8n7i7u6lnl60oo7b86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

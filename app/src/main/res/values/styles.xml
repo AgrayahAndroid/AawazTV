@@ -1,0 +1,50 @@
+<resources>
+
+    <!--    <style name="AppTheme" parent="@style/Theme.Leanback" />-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Leanback">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="playbackControlsAutoHideTickleTimeout">10000</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+    </style>
+
+    <style name="DefaultCardStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+
+    <!-- A default card style. -->
+    <style name="DefaultCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">@dimen/default_image_card_width</item>
+        <item name="android:layout_height">@dimen/default_image_card_height</item>
+    </style>
+
+    <style name="DefaultCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/DefaultCardStyle</item>
+        <item name="imageCardViewImageStyle">@style/DefaultCardImageStyle</item>
+    </style>
+
+
+    <style name="NewSeachTheme" parent="Theme.Leanback">
+        <item name="searchOrbViewStyle">@style/CustomSearchOrbView</item>
+        <item name="defaultSearchColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomSearchOrbView" parent="Widget.Leanback.SearchOrbViewStyle">
+        <item name="searchOrbIcon">@drawable/aawaz_logo_nw_256</item>
+        <item name="searchOrbIconColor">@android:color/transparent</item>
+    </style>
+
+
+    <!--search bar in brows-->
+    <style name="Widget.Leanback.SearchOrbViewStyle">
+        <item name="searchOrbIcon">?attr/defaultSearchIcon</item>
+        <item name="searchOrbColor">@android:color/white</item>
+        <item name="searchOrbIconColor">@color/black_color</item>
+        <item name="searchOrbBrightColor">@android:color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/media_browser_fragment">
+
+    <action
+        android:id="@+id/action_to_media_browser"
+        app:destination="@id/media_browser_fragment"
+        app:launchSingleTop="true" />
+
+    <!--    <action-->
+    <!--        android:id="@+id/action_to_now_playing"-->
+    <!--        app:destination="@id/now_playing_fragment" />-->
+
+    <fragment
+        android:id="@+id/media_browser_fragment"
+        android:name="com.aawaz.tv.ui.browser.MediaBrowserFragment"
+        android:label="Media Browser">
+
+        <argument
+            android:name="channel_id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_media_browser_fragment_to_albumDetailsFragment"
+            app:destination="@id/albumDetailsFragment" />
+
+        <action
+            android:id="@+id/action_media_browser_fragment_to_tvNowPlayingFragment"
+            app:destination="@id/tvNowPlayingFragment" />
+
+        <action
+            android:id="@+id/action_media_browser_fragment_to_exoPlayerFragment"
+            app:destination="@id/exoPlayerFragment" />
+
+        <action
+            android:id="@+id/action_media_browser_fragment_to_webFragment"
+            app:destination="@id/webFragment" />
+        <action
+            android:id="@+id/action_media_browser_fragment_to_exitFragment"
+            app:destination="@id/exitFragment" />
+
+        <action
+            android:id="@+id/action_media_browser_fragment_to_searchFragment"
+            app:destination="@id/tvSearchFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/albumDetailsFragment"
+        android:name="com.aawaz.tv.ui.details.AlbumDetailsFragment"
+        android:label="Album Details">
+
+        <argument
+            android:name="album"
+            app:argType="com.aawaz.tv.data.db.Album"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_albumDetailsFragment_to_exoPlayerFragment"
+            app:destination="@id/exoPlayerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvNowPlayingFragment"
+        android:name="com.aawaz.tv.ui.TvNowPlayingFragment"
+        android:label="TvNowPlayingFragment">
+
+        <argument
+            android:name="metadata"
+            app:argType="com.aawaz.tv.data.db.Album"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exoPlayerFragment"
+        android:name="com.aawaz.tv.ui.player.ExoPlayerFragment"
+        android:label="ExoPlayerFragment">
+
+        <argument
+            android:name="album"
+            app:argType="com.aawaz.tv.data.db.Album"
+            app:nullable="false" />
+
+        <argument
+            android:name="initialTrackToPlay"
+            android:defaultValue="@null"
+            app:argType="com.aawaz.tv.data.db.Episode"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_exoPlayerFragment_to_exitFragment"
+            app:destination="@id/exitFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.aawaz.tv.ui.web.WebFragment"
+        android:label="WebFragment">
+
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/exitFragment"
+        android:name="com.aawaz.tv.ui.exit.ExitFragment"
+        android:label="ExitFragment">
+
+        <argument
+            android:name="exitType"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_exitFragment_to_media_browser_fragment"
+            app:destination="@id/media_browser_fragment" />
+
+        <action
+            android:id="@+id/action_exitFragment_to_media_browser_fragment2"
+            app:destination="@id/media_browser_fragment" />
+
+        <action
+            android:id="@+id/action_exitFragment_to_exoPlayerFragment"
+            app:destination="@id/exoPlayerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvSearchFragment"
+        android:name="com.aawaz.tv.search.SearchFragment1"
+        android:label="tvSearchFragment">
+
+        <argument
+            android:name="channel_id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_search_fragment_to_albumDetailsFragment"
+            app:destination="@id/albumDetailsFragment" />
+
+        <action
+            android:id="@+id/action_search_Fragment_to_exoPlayerFragment"
+            app:destination="@id/exoPlayerFragment" />
+
+        <action
+            android:id="@+id/action_search_fragment_to_exitFragment"
+            app:destination="@id/exitFragment" />
+    </fragment>
+
+</navigation>

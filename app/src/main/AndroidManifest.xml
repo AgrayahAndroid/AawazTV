@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aawaz.tv">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+   <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <!-- Permissions for home screen launcher integration -->
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:name=".app.AawazTVApp"
+        android:allowBackup="true"
+        android:banner="@drawable/aawaz_banner_android_tv"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/aawaz_banner_android_tv"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.aawaz.tv.MainActivity"
+            android:banner="@drawable/aawaz_banner_android_tv"
+            android:theme="@style/Theme.Leanback.Details.NoSharedElementTransition"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+
+            <!-- Used as the main entry point from the leanback launcher -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+
+            <!-- Used as an entry point for channels and individual channel programs -->
+            <intent-filter>
+                <!-- Used to launch our content directly from home screen launcher or Assistant -->
+                <action android:name="android.intent.action.VIEW" />
+                <!-- Allows our app to be launched from a URL, not just via explicit intent -->
+                <!--                <category android:name="android.intent.category.BROWSABLE" />-->
+                <!-- Allows our app to receive implicit intents -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Define the filters for the URI being sent -->
+                <!--                <data android:host="@string/host_name" />-->
+                <!--                <data android:scheme="http" />-->
+                <!--                <data android:scheme="https" />-->
+                <!--                <data android:pathPattern=".*" />-->
+            </intent-filter>
+
+        </activity>
+
+        <!--RollBar Token-->
+        <meta-data android:name="com.rollbar.android.ACCESS_TOKEN"
+            android:value="45a3f5f4f3ea48f8a9830898cdfd4d19" />
+
+    </application>
+
+</manifest>
